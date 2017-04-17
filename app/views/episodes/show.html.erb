@@ -1,0 +1,18 @@
+<h1>Episode Info</h1>
+
+Run date: <h2><%= @episode.date %></h2>
+Episode number: <h2><%= @episode.number %></h2>
+Guests: <h2><%= @episode.guests.name %></h2>
+Rating: <h2><%= @episode.rating %></h2>
+
+<% if session[:id].present?  %>
+<%= link_to "Delete episode", delete_episode_path %>
+<%= link_to "Logout", logout_path %>
+<% end %>
+
+
+
+<!-- <% @episode.guests.each do |guest| %>
+  Guests: <h2><%= guest.name %></h2>
+<% end %>
+if multiple guests-->

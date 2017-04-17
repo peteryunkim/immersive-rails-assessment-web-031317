@@ -2,6 +2,13 @@
 
 <ul>
   <% @episodes.each do |episode| %>
-    <li><%= "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}"%></li>
+    <li><%= link_to "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}", episode_path(episode)%></li>
   <% end %>
 </ul>
+
+<% if session[:id].present? %>
+<%= link_to "Create Episode", new_episode_path %>
+<%= link_to "Logout", logout_path %>
+
+
+<% end %>

@@ -1,0 +1,5 @@
+<h1>Guest Info</h1>
+
+<h2>Guest name: <%=@guest.name %></h2>
+<h2>Guest occupation: <%=@guest.occupation %></h2>
+<h2>Guest appearances: <%=link_to @guest.episodes, episode_path(@guest.episodes.ids)%></h2>
